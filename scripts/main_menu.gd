@@ -7,3 +7,4 @@ func _on_button_pressed():
 #mainde değişiklik yapma denemesi
 #YEÖ
 #MZA
+#Emir Salih TEK YOL İSLAM
