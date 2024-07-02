@@ -6,6 +6,9 @@ var boss_heal = 0
 var boss = null
 var boss_path
 var level
+var heal_used = false
+var mana_used = false
+
 	
 # 0, 2, 4... çift sayı ise -> Boss'un turu
 # 1, 3, 5... tek sayı ise -> Bizim turumuz
@@ -70,11 +73,16 @@ func toggle_buttons():
 		$Button2.disabled = true
 		$Button3.disabled = true
 		$Button4.disabled = true
+		$Heal.disabled = true
+		$Mana.disabled = true
 	else: # Basamıyorsam hepsini disabledlıktan çıkar
 		$Button.disabled = false
 		$Button2.disabled = false
 		$Button3.disabled = false
 		$Button4.disabled = false
+		$Heal.disabled = false
+		$Mana.disabled = false
+
 
 func show_turn_label_text(text: String):
 	$TurnLabel.visible = true
@@ -144,3 +152,21 @@ func _on_resume_pressed():
 func _on_main_menu_pressed():
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+
+
+
+func _on_heal_pressed():
+	if $Player/PlayerHPBar.value < 100:
+		$Player/PlayerHPBar.value = $Player/PlayerHPBar.max_value
+		heal_used = true
+		$Heal.visible = false
+		$Heal.disabled = true
+
+
+func _on_mana_pressed():
+	if $Player/PlayerManaBar.value < 100:
+		$Player/PlayerManaBar.value = $Player/PlayerManaBar.max_value
+		mana_used = true
+		$Mana.visible = false
+		$Mana.disabled = true

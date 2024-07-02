@@ -1,2 +1,6 @@
+res://scripts/game.gd
+res://scenes/game.tscn
 res://scenes/main_menu.tscn
-res://scripts/main_menu.gd
+res://scenes/card.tscn
+res://scenes/map.tscn
+res://scenes/boss.tscn

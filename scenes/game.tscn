@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bko7av538q6rj"]
+[gd_scene load_steps=11 format=3 uid="uid://bko7av538q6rj"]
 
 [ext_resource type="Texture2D" uid="uid://cahr73ue3ux1k" path="res://assets/background (1).png" id="1_5xk3e"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_hm85s"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cnkwndigw02ob" path="res://scenes/boss.tscn" id="3_lb4p6"]
 [ext_resource type="PackedScene" uid="uid://da7u5xa3rtsr7" path="res://scenes/card.tscn" id="5_28upa"]
 [ext_resource type="Texture2D" uid="uid://4kbx0f5o61te" path="res://assets/pauselogo.png" id="5_p5fa0"]
+[ext_resource type="Texture2D" uid="uid://585t07ua76v2" path="res://assets/healpot.png" id="7_iehgv"]
+[ext_resource type="Texture2D" uid="uid://btfq1u00r02g4" path="res://assets/manapot.png" id="8_qqse6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jposa"]
 bg_color = Color(0.815686, 0.494118, 0, 1)
@@ -146,6 +148,22 @@ offset_right = 774.0
 offset_bottom = 402.0
 text = "MAIN MENU"
 
+[node name="Heal" type="TextureButton" parent="."]
+offset_left = 22.0
+offset_top = 205.0
+offset_right = 790.0
+offset_bottom = 1229.0
+scale = Vector2(0.0996342, 0.0996342)
+texture_normal = ExtResource("7_iehgv")
+
+[node name="Mana" type="TextureButton" parent="."]
+offset_left = 23.0
+offset_top = 312.0
+offset_right = 791.0
+offset_bottom = 1336.0
+scale = Vector2(0.0996342, 0.0996342)
+texture_normal = ExtResource("8_qqse6")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
@@ -155,3 +173,5 @@ text = "MAIN MENU"
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="PauseScreen/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PauseScreen/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Heal" to="." method="_on_heal_pressed"]
+[connection signal="pressed" from="Mana" to="." method="_on_mana_pressed"]
