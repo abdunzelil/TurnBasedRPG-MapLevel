@@ -3,7 +3,6 @@ extends Node2D
 var turn = 0
 var boss_damage = 0
 var boss_heal = 0
-var boss = null
 var boss_path
 var level
 	
