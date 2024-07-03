@@ -20,6 +20,7 @@ func _ready(): # --> Oyun başlangıcında ayarlanacak şeyler
 		boss_path.visible = true
 		boss_damage = 8
 		boss_heal = 0
+		#asd
 	elif Boss.which_boss == 2:
 		level = 2
 		boss_path = $Boss/VampireBoss
