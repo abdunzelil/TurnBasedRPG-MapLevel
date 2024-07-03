@@ -14,3 +14,4 @@ func _on_button_3_pressed():
 	CharacterSelection.choice = 3
 	get_tree().change_scene_to_file("res://scenes/map.tscn")
 #yorum satırı ekleniyor
+# yoru
